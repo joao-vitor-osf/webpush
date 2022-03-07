@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/fontawesome/css/all.css" rel="stylesheet"> 
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+                <div class="card">
+                    <ul class="list-group" style="font-size: 14px; width: 730px;">
+                        <li class="list-group-item active text-center" style="height: 40px">
+                           Relatório de Envios
+                        </li>
+                        <li class="list-group-item" style="height: 40px">
+                            <i class="fas fa-users" style="margin-right: 10px; color: black"></i>
+                            Total de envios:<span id="total_envios" style="margin-left: 6px; font-weight: bold;">0</span>
+                        </li>
+                        <li class="list-group-item"  style="height: 40px">
+                            <i class="fas fa-bell" style="margin-right: 10px; color: black"></i>
+                            Total de Recebimentos:<span id="total_recebimentos" style="margin-left: 6px; font-weight: bold;">0</span>
+                        </li>
+                        <li class="list-group-item"  style="height: 40px">
+                            <i class="fas fa-box-open" style="margin-right: 10px; color: black"></i>
+                            Total de Aberturas:<span id="total_aberturas" style="margin-left: 6px; font-weight: bold;">0</span>
+                        </li>
+                        <li class="list-group-item"  style="height: 40px">
+                            <i class="fas fa-user-alt-slash" style="margin-right: 10px; color: black"></i>
+                            Total de Falhas:<span id="total_falha" style="margin-left: 6px; font-weight: bold;">0</span>
+                        </li>
+                    </ul>
+                </div>
+		</div>
+	</div>
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script data-main="js/main.js" src="js/require.js"></script>
+<script defer src="assets/fontawesome/js/all.js"></script> 
+</html>

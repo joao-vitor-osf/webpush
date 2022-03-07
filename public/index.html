@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Cadastro PushNotification</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="assets/fontawesome/css/all.css" rel="stylesheet"> 
+	<link rel="stylesheet" href="assets/sweetalert/sweetalert2.min.css">
+
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+
+			<div class="col-sm-6" style="margin-top: 50px;">
+				<form id="formulario">
+
+					<div id="accordion">
+
+						<div class="card">
+							<div class="card-header" id="headingOne">
+								<h5 class="mb-0">
+									<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+											<i class="fas fa-braille" style="margin-right: 10px; color: black"></i>Básico
+									</button>
+								</h5>
+							</div>
+							<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-sm-12">
+				
+											<div class="form-group">
+												<input type="text" class="form-control" id="titulo" aria-describedby="emailHelp" placeholder="Titulo" required>
+											</div>
+				
+											<div class="form-group">
+												<input type="textarea" class="form-control" id="menssagem" rows="5" placeholder="Mensagen" required>
+											</div>
+
+											<div class="form-group">
+												<input type="text" class="form-control" pattern="https?://.+|http?://.+" id="web_url" placeholder="Url Web">
+											</div>
+					
+											<div class="form-group">
+												<input type="text" class="form-control" pattern="https?://.+|http?://.+" id="app_url" placeholder="Url App">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card-header" id="headingTwo">
+								<h5 class="mb-0">
+									<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+										<i class="fab fa-chrome" style="margin-right: 10px; color: black"></i>Chrome
+									</button>
+								</h5>
+							</div>
+
+							<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+							<div class="card-body">
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="form-group">
+											<input type="text" class="form-control" pattern="https?://.+|http?://.+" id="chrome_web_icon" placeholder="Ícone do Chrome">
+										</div>
+			
+										<div class="form-group">
+											<input type="text" class="form-control" pattern="https?://.+|http?://.+" id="chrome_web_image" placeholder="Imagem do Chrome">
+										</div>
+									</div>
+								</div>
+							</div>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card-header" id="headingThree">
+								<h5 class="mb-0">
+									<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+										<i class="fab fa-safari" style="margin-right: 10px; color: black"></i>Safari
+									</button>
+								</h5>
+							</div>
+
+							<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="form-group">
+												<input type="text" class="form-control" pattern="https?://.+|http?://.+" id="safari_icon_256_256" placeholder="Ícone Safare 256px">
+											</div>
+				
+											<div class="form-group">
+												<input type="text" class="form-control" pattern="https?://.+|http?://.+" id="safari_icon_128_128" placeholder="Ícone Safare 128px">
+											</div>
+										
+											<div class="form-group">
+												<input type="text" class="form-control" pattern="https?://.+|http?://.+" id="safari_icon_64_64" placeholder="Ícone Safare 64px">
+											</div>
+				
+											<div class="form-group">
+												<input type="text" class="form-control" pattern="https?://.+|http?://.+" id="safari_icon_32_32" placeholder="Ícone Safare 32px">
+											</div>
+									
+											<div class="form-group">
+												<input type="text" class="form-control" pattern="https?://.+|http?://.+" id="safari_icon_16_16" placeholder="Ícone Safare 16px">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="card">
+							<div class="card-header" id="headingThree">
+								<h5 class="mb-0">
+									<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+										<i class="fas fa-folder-plus" style="margin-right: 10px; color: black"></i>Adicionais
+									</button>
+								</h5>
+							</div>
+							<div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="delayed_option">
+												<label class="form-check-label" for="delayed_option">
+													Smart Send
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" id="headingThree">
+								<h5 class="mb-0">
+									<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+										<i class="fas fa-folder-plus" style="margin-right: 10px; color: black"></i>Cadastrar Cliente
+									</button>
+								</h5>
+							</div>
+							<div id="collapseFive" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="form-group">
+												<label class="form-group-label" for="app_id">
+													Nome
+												</label>
+												<input class="form-control" type="text"  id="clientName">
+											</div>
+											<div class="form-group">
+												<label class="form-group-label" for="app_id">
+													App_id
+												</label>
+												<input class="form-control" type="text"  id="app_id">
+											</div>
+											<div class="form-group">
+												<label class="form-group-label" for="token">
+													Token
+												</label>
+												<input class="form-control" type="text"  id="token">
+											</div>
+											<div class="text-center">
+												<button type="button" class="btn btn-primary btnCriar">Cadastrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header" id="headingThree">
+								<h5 class="mb-0">
+									<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
+										<i class="fas fa-folder-plus" style="margin-right: 10px; color: black"></i>Escolher Cliente
+									</button>
+								</h5>
+							</div>
+							<div id="collapseSix" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="form-group">
+												<select class="form-control" id="selectClient" aria-label="Default select example" required>
+													<option>Selecione um cliente</option>
+												  </select>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+
+
+
+			<div class="col-sm-6">
+				<ul class="nav nav-pills justify-content-center mb-3" id="pills-tab" role="tablist">
+					<li class="nav-item">
+					<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Web Windows</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Web Mac</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Android</a>
+					</li>
+				</ul>
+				<div class="tab-content" id="pills-tabContent">
+					<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+						<div class="win-master">
+							<div class="win-imagem-destaque"><img class="win-img-destaque" id="chrome_web_image-win-view">
+								<div class="win-conteiner-geral">
+									<div class="win-imagem-lateral">
+										<div class="win-mini-chrome-icon">
+											<svg class="win-mini-chrome-icon-width" viewBox="0 0 48 48">
+												<circle cx="24" cy="24" r="19" fill="#4CAF50"></circle>
+												<path fill="#FFC107" d="M24 5v19l8 4-8.8 15h.8c10.5 0 19-8.5 19-19S34.5 5 24 5z"></path>
+												<path fill="#F44336" d="M16 28l8-13h16.7C37.5 9 31.2 5 24 5c-6.7 0-12.6 3.5-16 8.8L16 28z"></path>
+												<path fill="#DD2C00" d="M8 13.8L16 28l5-1"></path>
+												<path fill="#F9A825" d="M40.6 15H24l-1.5 4.8"></path>
+												<path fill="#558B2F" d="M23.2 43L32 28l-3.8-3.1"></path>
+												<circle cx="24" cy="24" r="9" fill="#FFF"></circle>
+												<circle cx="24" cy="24" r="7" fill="#2196F3"></circle>
+											</svg>
+										</div>
+										<img class="win-img-lateral" id="chrome_web_icon-win-view">
+									</div>
+									<div class="win-conteiner-texto">
+										<div class="win-conteiner-titulo" id="titulo-win-view">Titulo</div>
+										<div class="win-conteiner-menssagem" id="menssagem-win-view">Mensagem</div>
+										<div class="win-conteiner-site">Google Chrome • www.werise.com.br</div>
+									</div>
+									<div class="win-rigth-icon"></div>
+								</div>
+								<div class="win-botton"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+						<div class="mac-master">
+							<div class="mac-conteiner">
+								<div class="mac-icon-chrome">
+									<svg viewBox="0 0 48 48">
+										<circle cx="24" cy="24" r="19" fill="#4CAF50"></circle>
+										<path fill="#FFC107" d="M24 5v19l8 4-8.8 15h.8c10.5 0 19-8.5 19-19S34.5 5 24 5z"></path>
+										<path fill="#F44336" d="M16 28l8-13h16.7C37.5 9 31.2 5 24 5c-6.7 0-12.6 3.5-16 8.8L16 28z"></path>
+										<path fill="#DD2C00" d="M8 13.8L16 28l5-1"></path>
+										<path fill="#F9A825" d="M40.6 15H24l-1.5 4.8"></path>
+										<path fill="#558B2F" d="M23.2 43L32 28l-3.8-3.1"></path>
+										<circle cx="24" cy="24" r="9" fill="#FFF"></circle>
+										<circle cx="24" cy="24" r="7" fill="#2196F3"></circle>
+									</svg>
+								</div>
+								<div class="mac-container-texto">
+									<div class="mac-container-titulo" id="titulo-mac-view">Titulo</div>
+									<div class="mac-conteiner-site">www.werise.com.br</div>
+									<div class="mac-conteiner-corpo" id="menssagem-mac-view">Menssagem</div>
+								</div>
+								<div class="mac-conteiner-imagem">
+										<img class="mac-imagem" id="chrome_web_icon-mac-view">
+								</div>
+							</div>
+						</div>						
+					</div>
+
+					<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+						<div class="mob-master">
+							<div class="mob-conteiner-geral">
+								<div class="mob-conteiner">
+									<div class="mob-conteiner-superior">
+										<svg class="mob-icon-superior" viewBox="0 0 1024 1024">
+											<path stroke="inherit" d="M258.278 446.542l-146.532-253.802c93.818-117.464 238.234-192.74 400.254-192.74 187.432 0 351.31 100.736 440.532 251h-417.77c-7.504-0.65-15.092-1-22.762-1-121.874 0-224.578 83.644-253.722 196.542zM695.306 325h293.46c22.74 57.93 35.234 121.004 35.234 187 0 280.826-226.1 508.804-506.186 511.926l209.394-362.678c29.48-42.378 46.792-93.826 46.792-149.248 0-73.17-30.164-139.42-78.694-187zM326 512c0-102.56 83.44-186 186-186s186 83.44 186 186c0 102.56-83.44 186-186 186s-186-83.44-186-186zM582.182 764.442l-146.578 253.878c-246.532-36.884-435.604-249.516-435.604-506.32 0-91.218 23.884-176.846 65.696-251.024l209.030 362.054c41.868 89.112 132.476 150.97 237.274 150.97 24.3 0 47.836-3.34 70.182-9.558z"></path>
+										</svg><span class="mob-texto-superior">Chrome • www.werise.com.br</span>
+										<span class="mob-icon-ocultar"></span>
+										<span class="mob-icon-mostrar"></span>
+									</div>
+									<div class="mob-conteiner-texto-geral">
+										<div class="mob-conteiner-texto">
+											<div class="mob-conteiner-texto-sub">
+												<div class="mob-conteiner-titulo" id="titulo-mob-view">Titulo</div>
+												<div class="mob-conteiner-titulo-sub" id="menssagem-mob-view">Menssage</div>
+											</div>
+											<img class="mob-icon" id="chrome_web_icon-mob-view">
+										</div>
+										<img class="mob-conteiner-imagem-destaque">
+									</div>
+								</div>
+							</div>
+						</div>	
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script data-main="js/main.js" src="js/require.js"></script>
+<script defer src="assets/fontawesome/js/all.js"></script> 
+<script src="assets/sweetalert/sweetalert2.min.js"></script>
+<script src="js/actions.js"></script>
+<script src="js/submit.js"></script>
+</html>

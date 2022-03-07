@@ -1,0 +1,79 @@
+{
+	"metaData": {
+		"icon": "images/icon.png",
+		"iconSmall": "images/icon_small.jpeg"
+	},
+	"type": "REST",
+    "lang": {
+        "en-US": {
+          "name": "Webpushs",
+          "description": "A Template for a custom Journey Builder activity",
+          "step1Label": "Push Notifications"
+        },
+        "pt-br": {
+          "name": "Webpushs",
+          "description": "Template de customização Journey Builder activity",
+          "step1Label": "Push Notifications"
+      }
+    },
+	"workflowApiVersion": "1.1",
+	"configurationArguments": {
+		"applicationExtensionKey": "cb567086-e170-495a-b8cc-379650568906",
+		"save": {
+			"url": "https://webpush-osf.herokuapp.com/activity/save",
+			"verb": "POST",
+			"body": "",
+			"useJwt": true
+		},
+		"publish": {
+			"url": "https://webpush-osf.herokuapp.com/activity/publish",
+			"verb": "POST",
+			"body": "",
+			"useJwt": true
+		},
+		"validate": {
+			"url": "https://webpush-osf.herokuapp.com/activity/validate",
+			"verb": "POST",
+			"body": "",
+			"useJwt": true
+		}
+	},
+	"outcomes": [
+		{
+			"arguments": {
+				"branchResult": "titulo"
+			},
+			"metaData": {
+				"label": "titulo"
+			}
+		}
+	],
+	"userInterfaces": {
+		"runningModal": {
+			"url": "runningModal.html"
+		},
+		"runningHover": {
+			"url": "runningHover.html"
+		}
+	},
+	"arguments": {
+		"execute": {
+			"inArguments": [
+				{}
+			],
+      "outArguments": [],
+			"url": "https://webpush-osf.herokuapp.com/activity/execute",
+			"verb": "POST",
+			"body": "",
+			"headers": "{ \"foo\": \"bar\" }",
+			"format": "json",
+			"useJwt": true,
+			"timeout": 90000
+		}
+	},
+	"edit": {
+		"url": "https://webpush-osf.herokuapp.com/index.html",
+		"height": 770,
+		"width": 1250
+	}
+}
